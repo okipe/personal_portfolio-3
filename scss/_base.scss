@@ -1,21 +1,44 @@
-/*
-En este archivo deberán ir todas tus reglas base:
+// 
+// En este archivo deberán ir todas tus reglas base:
 
-Las reglas base pueden ser:
-- resets
-- variables
-- mixins
-- clases generales
-*/
+// Las reglas base pueden ser:
+// - resets
+// - variables
+// - mixins
+// - clases generales
 
-// PALETA DE COLORES
+/* COLOR PALETTE */
 
-// light colors
-$color-background-light: #e2e9f3;
-$color-main_text-light: #111b2a;
-$color-button-light: #000000;
+/* light colors */
+$background-color-light: #fffbef;
+$background_2-color-light: #262a3b;
+$background_3-color-light: #ffffff;
+$main_text-color-light: #000000;
+$other_1-color-light: #feef22;
+$other_2-color-light: #fe4a55;
 
-// dark colors
-$color-background-dark: #000000;
-$color-main_text-dark: #ffffff;
-$color-button-dark: #000000;
+
+/* dark colors */
+$background-color-dark: #262a3b;
+$main_text-color-dark: #ffffff;
+$background_3-color-dark: #fffbef;
+$background_2-color-dark: #000000;
+$other_1-color-dark: #feef22;
+$other_2-color-dark: #fe4a55;
+
+/* FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,700;1,800;1,900&display=swap');
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-width: 1400px;
+    margin: 0 auto;
+}
