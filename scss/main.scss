@@ -1,18 +1,3 @@
-// Este es el documento que estaremos compilando.
-// Aquí sólo deben ser referenciados aquellos parciales (documentos _document.scss)
-// que vayas utilizar para armar tu CSS 
-
-// La estructura simple sirve principalmente para sitios estáticos
-// o páginas lo suficientemente simples 
-// que no tienen planes para escalar demasiado.
-
-// La estructura simple puede ampliar creando una carpeta
-// donde podamos guardar los parciales de nuestros componentes
-// Por ejemplo:
-// _slider.scss
-// _modal.scss
-// _button.scss
-
 @use 'base';
 @use 'components';
 @use 'layout';

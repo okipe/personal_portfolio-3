@@ -3,3 +3,16 @@
 // Se considera layout:
 // - grid
 // - contenedores
+
+@use 'base' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &__menu {
+        align-items: center;
+        display: flex;
+        font-family: $text-font;
+    }
+}

@@ -1,0 +1,33 @@
+/* COLOR PALETTE */
+/* light colors */
+/* dark colors */
+/* FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,300;1,400;1,700;1,800;1,900&display=swap");
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  background: #262a3b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__menu {
+  align-items: center;
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

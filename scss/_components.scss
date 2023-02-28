@@ -6,3 +6,9 @@
 // - estilos para secciones 
 // - tarjetas
 // - modals
+
+@use 'base' as *;
+
+body {
+    background: $background-color-dark;
+}
