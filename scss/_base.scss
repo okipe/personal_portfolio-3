@@ -17,10 +17,10 @@ $main_text-color-light: #000000;
 $other_1-color-light: #feef22;
 $other_2-color-light: #fe4a55;
 
-
 /* dark colors */
 $background-color-dark: #262a3b;
 $main_text-color-dark: #ffffff;
+$black-text-bottom: #000000;
 $background_3-color-dark: #fffbef;
 $background_2-color-dark: #000000;
 $other_1-color-dark: #feef22;
@@ -42,6 +42,27 @@ $text-font: 'Nunito Sans', sans-serif;
 
 html {
     scroll-behavior: smooth;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
+
+body {
+    background: $background-color-dark;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $title-font;
+    color: $main_text-color-dark;
+}
+
+p {
+    font-family: $text-font;
+    color: $main_text-color-dark;
+}
+
+/* MEDIA QUERIES */
+
+// variables:
+$breakpoint-sm: 700px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;

@@ -9,6 +9,148 @@
 
 @use 'base' as *;
 
-body {
-    background: $background-color-dark;
+/* BUTTONS */
+
+.button--main {
+    background-color: $other_1-color-dark;
+    border-radius: 1rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-family: $text-font;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button--secondary {
+    // background-color: $other_1-color-dark;
+    display: inline-flex;
+    border: 1px solid $other_1-color-dark;
+    color: $main_text-color-dark;
+    border-radius: 0.5rem;
+    margin-top: 15px;
+    margin-right: 20px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-family: $text-font;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 30px;
+    &__logo {
+        width: 100px;
+    }
+
+    &__menu li {
+        list-style: none;
+        font-family: $text-font;
+        
+        a {
+            text-decoration: none;
+            color: $main_text-color-dark;
+            margin: 0 30px;
+            font-size: 20px;
+
+            &:hover{
+                color: $other_1-color-dark;
+            }
+        }
+    }
+}
+
+/* MAIN */
+
+.hero {
+    padding: 0 50px;
+    margin: 80px 0;
+    
+    &__left {
+        margin: auto 0;
+    }
+
+    &__title {
+        font-family: $title-font;
+        font-weight: bold;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-family: $text-font;
+        font-size: 500;
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        @extend .button--main;
+    }
+}
+
+.projects {
+    &__title-container {
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        h2 {
+            font-family: $title-font;
+            font-size: 32px;
+            font-weight: 800;
+        }
+    }
+
+    &__grid {
+        &__element {
+            
+            img {
+                width: 100%;
+            }
+
+            h4 {
+                font-size: 24px;
+                margin: 16px 0 12px 0;
+            }
+
+            a {
+                @extend .button--secondary;
+            }
+
+        }
+    } 
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: $breakpoint-md){
+    .navbar__menu li a {
+        margin: 0 16px;
+    
+        &:hover{
+            color: $other_1-color-dark;
+            }
+        }
+
+    .hero {
+          
+        &__title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
+
 }

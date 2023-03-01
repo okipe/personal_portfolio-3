@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscar Román - desarrollador web y comunicador digital</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -13,12 +13,55 @@
         <nav class="navbar">
             <a href="#inicio"><img src="./assets/img/personal_brand-dark.svg" alt="Logo Oscar Román Developer" class="navbar__logo"></a>
             <ul class="navbar__menu">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#somos">¿Quienes somos?</a></li>
-                <li><a href="#home">Contacto</a></li>
-                <li><a href="#home">Recursos gratis</a></li>
+                <li><a href="#servicios">Proyectos</a></li>
+                <li><a href="#somos">Tecnologías</a></li>
+                <li><a href="#home">Sobre mí</a></li>
+                <li><a href="#home">Recursos</a></li>
             </ul>
-        </nav>
-    </header>
+        </nav><!--End of .navbar-->
+    </header> 
+    
+    <!-- Main -->
+    <main> 
+        <div class="hero">
+            <div class="hero__left">
+                <h1 class="hero__title">Hola, soy <br/>Oscar Román</h1>
+                <p class="hero__subtitle">Maquetador web y comunicador digital</p>
+                <a href="#" class="hero__button">Descargar CV</a>
+            </div>
+            <div class="hero__right">
+                <img src="./assets/img/hero-img-slider.svg" alt="Oscar programando">
+            </div>
+        </div> <!--End of .hero-->
+
+        <div class="projects">
+            <div class="projects__title-container">
+                <h2>Mis proyectos</h2>
+            </div>
+            <div class="projects__grid">
+                <article class="projects__grid__element">
+                    <img src="./assets/img/image-gen.avif" alt="">
+                    <h4>Título del proyecto</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culus possimus nam nisi aliquam neque.</p>
+                    <a href="#">Código</a>
+                    <a href="#">Demo</a>
+                </article>
+                <article class="projects__grid__element">
+                    <img src="./assets/img/image-gen.avif" alt="">
+                    <h4>Título del proyecto</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culus possimus nam nisi aliquam neque.</p>
+                    <a href="#">Código</a>
+                    <a href="#">Demo</a>
+                </article>
+                <article class="projects__grid__element">
+                    <img src="./assets/img/image-gen.avif" alt="">
+                    <h4>Título del proyecto</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culus possimus nam nisi aliquam neque.</p>
+                    <a href="#">Código</a>
+                    <a href="#">Demo</a>
+                </article>
+            </div>
+        </div><!-- End .projects -->
+    </main>
 </body>
 </html>

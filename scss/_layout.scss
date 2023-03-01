@@ -13,6 +13,25 @@
     &__menu {
         align-items: center;
         display: flex;
-        font-family: $text-font;
+        font-family: $black-text-bottom;
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        
     }
 }
+
+main {
+    .hero {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+    }
+    .projects__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
+
