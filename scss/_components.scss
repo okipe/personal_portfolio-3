@@ -36,6 +36,16 @@
     text-decoration: none;
 }
 
+/* TITLES */
+
+.heading--2 {
+    font-family: $title-font;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /* NAVBAR */
 .navbar {
     padding: 30px;
@@ -99,20 +109,17 @@
 }
 
 .projects {
+    margin-bottom: 60px;
     &__title-container {
-        text-align: center;
         padding-top: 40px;
         padding-bottom: 20px;
         h2 {
-            font-family: $title-font;
-            font-size: 32px;
-            font-weight: 800;
+            @extend .heading--2;
         }
     }
 
     &__grid {
         &__element {
-            
             img {
                 width: 100%;
             }
@@ -125,9 +132,70 @@
             a {
                 @extend .button--secondary;
             }
-
         }
     } 
+}
+
+.technologies {
+    margin-bottom: 60px;
+
+    &__title-container {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        h2 {
+            @extend .heading--2;
+        }
+    }
+
+    &__element {
+        background-color: #343848;
+        padding: 20px 20px;
+        
+        &__icons-container {
+            display: flex;
+            margin-top: 15px;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* ABOUT-ME*/
+
+.about-me {
+    margin: 60px 60px 0 60px;
+
+    h2 {
+        @extend .heading--2;
+    }
+
+    p {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+}
+
+.studies {
+    margin: 60px 0 0 0;
+
+    &__grid__item {
+        margin: 20px 0;
+    }
+    
+    h2 {
+        @extend .heading--2;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 16 0px;
+    }
+
+    p {
+        font-size: 20px;
+    }
 }
 
 /* MEDIA QUERIES */
@@ -152,5 +220,4 @@
             font-size: 20px;
         }
     }
-
 }

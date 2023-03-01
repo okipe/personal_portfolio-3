@@ -51,7 +51,16 @@ main .projects__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  gap: 20px;
+  gap: 40px;
+}
+main .technologies__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+main .studies__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* BUTTONS */
@@ -77,6 +86,15 @@ main .projects__grid {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   text-decoration: none;
+}
+
+/* TITLES */
+.heading--2, .studies h2, .about-me h2, .technologies__title-container h2, .projects__title-container h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* NAVBAR */
@@ -128,15 +146,12 @@ main .projects__grid {
 .hero__right img {
   width: 100%;
 }
+.projects {
+  margin-bottom: 60px;
+}
 .projects__title-container {
-  text-align: center;
   padding-top: 40px;
   padding-bottom: 20px;
-}
-.projects__title-container h2 {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
 }
 .projects__grid__element img {
   width: 100%;
@@ -145,6 +160,48 @@ main .projects__grid {
   font-size: 24px;
   margin: 16px 0 12px 0;
 }
+.technologies {
+  margin-bottom: 60px;
+}
+.technologies__title-container {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.technologies__element {
+  background-color: #343848;
+  padding: 20px 20px;
+}
+.technologies__element__icons-container {
+  display: flex;
+  margin-top: 15px;
+}
+.technologies__element__icons-container img {
+  margin-right: 10px;
+}
+
+/* ABOUT-ME*/
+.about-me {
+  margin: 60px 60px 0 60px;
+}
+.about-me p {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.studies {
+  margin: 60px 0 0 0;
+}
+.studies__grid__item {
+  margin: 20px 0;
+}
+.studies h3 {
+  font-size: 24px;
+  margin: 16 0px;
+}
+.studies p {
+  font-size: 20px;
+}
+
 /* MEDIA QUERIES */
 @media all and (max-width: 992px) {
   .navbar__menu li a {

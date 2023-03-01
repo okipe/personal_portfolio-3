@@ -27,11 +27,22 @@ main {
         grid-template-rows: 1fr;
         gap: 30px;
     }
+
     .projects__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
-        gap: 20px;
+        gap: 40px;
+    }
+
+    .technologies__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+
+    .studies__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
-
