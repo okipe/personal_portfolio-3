@@ -47,6 +47,9 @@ main .hero {
   grid-template-rows: 1fr;
   gap: 30px;
 }
+main .hero__grid--low {
+  display: flex;
+}
 main .projects__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -57,6 +60,14 @@ main .technologies__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+}
+main .about-me__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+main .about-me__grid--left {
+  display: flex;
 }
 main .studies__grid {
   display: grid;
@@ -72,6 +83,7 @@ main .studies__grid {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   text-decoration: none;
+  color: #000000;
 }
 
 .button--secondary, .projects__grid__element a {
@@ -146,6 +158,15 @@ main .studies__grid {
 .hero__right img {
   width: 100%;
 }
+.hero__icons {
+  margin: 0 30px;
+  align-self: center;
+  height: 30px;
+}
+.hero__icons a {
+  margin-right: 20px;
+}
+
 .projects {
   margin-bottom: 60px;
 }
@@ -180,12 +201,34 @@ main .studies__grid {
 }
 
 /* ABOUT-ME*/
+/* .about-me {
+    margin: 0 60px 0 0;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        @extend .heading--2;
+    }
+
+    p {
+        font-size: 22px;
+        margin-bottom: 12px;
+        line-height: 2;
+    }
+} */
 .about-me {
-  margin: 60px 60px 0 60px;
+  margin: 0 60px 0 0;
 }
-.about-me p {
+.about-me__grid--left img {
+  align-self: center;
+  width: 100%;
+}
+.about-me__grid--right p {
   font-size: 22px;
   margin-bottom: 12px;
+  line-height: 2;
 }
 
 .studies {
@@ -210,6 +253,7 @@ main .studies__grid {
   .navbar__menu li a:hover {
     color: #feef22;
   }
+
   .hero__title {
     font-size: 36px;
     margin-bottom: 20px;
