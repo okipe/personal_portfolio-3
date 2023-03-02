@@ -12,12 +12,20 @@
 
 html {
   scroll-behavior: smooth;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 body {
   background: #262a3b;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -73,6 +81,18 @@ main .studies__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+main .contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+main .contact__column--left {
+  display: flex;
+}
+
+footer .footer__container {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* BUTTONS */
 .button--main, .hero__button {
@@ -100,8 +120,8 @@ main .studies__grid {
   text-decoration: none;
 }
 
-/* TITLES */
-.heading--2, .studies h2, .about-me h2, .technologies__title-container h2, .projects__title-container h2 {
+/* TEXT STYLES */
+.heading--2, .contact__column--left h2, .studies h2, .about-me h2, .technologies__title-container h2, .projects__title-container h2 {
   font-family: "Nunito Sans", sans-serif;
   font-size: 32px;
   font-weight: 800;
@@ -243,6 +263,47 @@ main .studies__grid {
 }
 .studies p {
   font-size: 20px;
+}
+
+.contact {
+  margin-top: 100px;
+}
+.contact__column--left h2 {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+.contact__column--right p {
+  font-size: 22px;
+  margin-bottom: 12px;
+  line-height: 2;
+}
+.contact__column--right li {
+  color: #ffffff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+  line-height: 2;
+  margin-left: 2rem;
+}
+.contact__column--right li a {
+  color: #ffffff;
+}
+
+footer {
+  background-color: black;
+  margin-top: 100px;
+}
+footer .footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+footer .footer__container p {
+  align-self: center;
+}
+footer .footer__container img {
+  margin-right: 20px;
 }
 
 /* MEDIA QUERIES */

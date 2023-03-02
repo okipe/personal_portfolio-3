@@ -59,4 +59,18 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        &__column--left {
+            display: flex;
+        }
+    }
+}
+
+footer .footer__container {
+    display: flex;
+    justify-content: space-between;
 }
