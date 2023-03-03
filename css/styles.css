@@ -80,6 +80,7 @@ main .about-me__grid--left {
 main .studies__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 60px;
 }
 main .contact {
   display: grid;
@@ -145,6 +146,7 @@ footer .footer__container {
   color: #ffffff;
   margin: 0 30px;
   font-size: 20px;
+  transition: margin 0.25s linear;
 }
 .navbar__menu li a:hover {
   color: #feef22;
@@ -152,7 +154,6 @@ footer .footer__container {
 
 /* MAIN */
 .hero {
-  padding: 0 50px;
   margin: 80px 0;
 }
 .hero__left {
@@ -188,7 +189,7 @@ footer .footer__container {
 }
 
 .projects {
-  margin-bottom: 60px;
+  margin: 60px 0 0 0;
 }
 .projects__title-container {
   padding-top: 40px;
@@ -202,7 +203,7 @@ footer .footer__container {
   margin: 16px 0 12px 0;
 }
 .technologies {
-  margin-bottom: 60px;
+  margin: 60px 0 0 0;
 }
 .technologies__title-container {
   padding-top: 40px;
@@ -239,7 +240,7 @@ footer .footer__container {
     }
 } */
 .about-me {
-  margin: 0 60px 0 0;
+  margin: 60px 0 0 0;
 }
 .about-me__grid--left img {
   align-self: center;
@@ -266,7 +267,7 @@ footer .footer__container {
 }
 
 .contact {
-  margin-top: 100px;
+  margin: 100px 0 0 0;
 }
 .contact__column--left h2 {
   align-self: center;
@@ -307,14 +308,57 @@ footer .footer__container img {
 }
 
 /* MEDIA QUERIES */
-@media all and (max-width: 992px) {
+@media all and (max-width: 1400px) {
+  .hero,
+  .projects,
+  .technologies,
+  .about-me,
+  .studies,
+  .contact {
+    margin: 60px 60px 0 60px;
+  }
+  footer .footer__container {
+    padding: 30px 60px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .hero__icons {
+    margin: 0 20px;
+    align-self: center;
+    height: 30px;
+  }
+  .hero__icons a {
+    margin-right: 10px;
+  }
+  .about-me__grid--right p {
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .contact__column--right p {
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .contact__column--right li {
+    color: #ffffff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    margin-left: 1.5rem;
+  }
+  .contact__column--right li a {
+    color: #ffffff;
+  }
+}
+@media all and (max-width: 960px) {
   .navbar__menu li a {
     margin: 0 16px;
   }
   .navbar__menu li a:hover {
     color: #feef22;
   }
-
   .hero__title {
     font-size: 36px;
     margin-bottom: 20px;

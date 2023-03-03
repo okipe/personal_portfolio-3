@@ -50,6 +50,7 @@
 /* NAVBAR */
 .navbar {
     padding: 30px;
+
     &__logo {
         width: 100px;
     }
@@ -63,6 +64,10 @@
             color: $main_text-color-dark;
             margin: 0 30px;
             font-size: 20px;
+            transition: margin .25s linear; 
+            // -o-transition: font-size .25s linear; 
+            // -moz-transition: font-size .25s linear; 
+            // -webkit-transition: font-size .25s linear; 
 
             &:hover{
                 color: $other_1-color-dark;
@@ -74,7 +79,7 @@
 /* MAIN */
 
 .hero {
-    padding: 0 50px;
+    // padding: 0 50px;
     margin: 80px 0;
     
     &__left {
@@ -120,7 +125,9 @@
 }
 
 .projects {
-    margin-bottom: 60px;
+    margin: 60px 0 0 0;
+    // padding: 0 50px;
+
     &__title-container {
         padding-top: 40px;
         padding-bottom: 20px;
@@ -148,7 +155,7 @@
 }
 
 .technologies {
-    margin-bottom: 60px;
+    margin: 60px 0 0 0;
 
     &__title-container {
         padding-top: 40px;
@@ -194,7 +201,7 @@
 } */
 
 .about-me {
-    margin: 0 60px 0 0;
+    margin: 60px 0 0 0;
     
     h2 {
         @extend .heading--2;
@@ -234,7 +241,7 @@
 }
 
 .contact {
-    margin-top: 100px;
+    margin: 100px 0 0 0;
 
     &__column--left h2 {
         @extend .heading--2;
@@ -267,7 +274,7 @@ footer {
     background-color: black;
     margin-top: 100px;
 
-    .footer__container{
+    .footer__container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 30px 0;
@@ -283,6 +290,61 @@ footer {
 } 
 
 /* MEDIA QUERIES */
+
+@media all and (max-width: $breakpoint-xlg) {
+    .hero,
+    .projects,
+    .technologies,
+    .about-me,
+    .studies,
+    .contact {
+        margin: 60px 60px 0 60px;
+    }
+
+    footer .footer__container {
+        padding: 30px 60px;
+    }
+}
+
+@media all and (max-width: $breakpoint-lg) {
+    .hero__icons {
+        margin: 0 20px; 
+        align-self: center;
+        height: 30px;
+
+        a {
+            margin-right: 10px;
+        }
+    }
+
+    .about-me__grid--right p {
+        font-size: 20px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .contact {
+    
+        &__column--right p {
+            font-size: 20px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+    
+        &__column--right li {
+            color: $main_text-color-dark;
+            font-family: $text-font;
+            font-size: 20px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            margin-left: 1.5rem;
+    
+            a {
+                color: $main_text-color-dark;
+            }
+        }
+    }
+}
 
 @media all and (max-width: $breakpoint-md){
     .navbar__menu li a {
