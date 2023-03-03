@@ -22,6 +22,18 @@
     color: $black-text-button;
 }
 
+// .button--main-mobile {
+//     background-color: $other_1-color-dark;
+//     border-radius: 1rem;
+//     padding: 0.8rem 1.5rem;
+//     text-decoration: none;
+//     font-family: $text-font;
+//     font-size: 32px;
+//     font-weight: bold;
+//     text-decoration: none;
+//     color: $black-text-button;
+// }
+
 .button--secondary {
     // background-color: $other_1-color-dark;
     display: inline-flex;
@@ -52,7 +64,7 @@
     padding: 30px;
 
     &__logo {
-        width: 100px;
+        width: 10vh;
     }
 
     &__menu li {
@@ -291,7 +303,7 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media all and (max-width: $breakpoint-xlg) {
+@media all and (max-width: $breakpoint-xxl) {
     .hero,
     .projects,
     .technologies,
@@ -306,7 +318,7 @@ footer {
     }
 }
 
-@media all and (max-width: $breakpoint-lg) {
+@media all and (max-width: $breakpoint-xl) {
     .hero__icons {
         margin: 0 20px; 
         align-self: center;
@@ -346,8 +358,8 @@ footer {
     }
 }
 
-@media all and (max-width: $breakpoint-md){
-    .navbar__menu li a {
+@media all and (max-width: $breakpoint-lg){
+    main .navbar__menu li a {
         margin: 0 16px;
     
         &:hover{
@@ -355,15 +367,152 @@ footer {
             }
         }
 
-    .hero {
-          
+    main .hero {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+
         &__title {
-            font-size: 36px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
     
         &__subtitle {
             font-size: 20px;
         }
+
+        &__button {
+            padding: 10px 15px;
+        }
+    }
+
+    main .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr;
+        gap: 40px;
+    }
+
+    main .technologies__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    main .contact {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: $breakpoint-md) {
+    header nav .navbar__menu {
+        display: none;
+    }
+    
+    main .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &__grid--low {
+            display: grid;
+            justify-content: center;
+        }
+
+        &__right {
+            display: none;
+        }
+    
+        &__title {
+            font-size: 56px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        &__subtitle {
+            font-size: 32px;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &__button {
+            font-size: 24px;
+            color: $black-text-button;
+            text-align: center;
+            margin-bottom: 40px;
+
+            a {
+                max-width: 100px;
+            }
+        }
+    
+        &__icons {
+            margin: 0 30px; 
+            align-self: center;
+            height: 30px;
+    
+            a{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    main .projects__grid {
+        grid-template-columns: 1fr;
+        // grid-template-rows: fr;
+        gap: 40px;
+    }
+
+    main .technologies__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    main .about-me__grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer__container{
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin: 0 10px 10px 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media all and (max-width: $breakpoint-sm) {
+    main .hero__left {
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+    }
+    
+    main .technologies__grid {
+        grid-template-columns: 1fr;
+    }
+
+    main .studies__grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        &__item:last-child {
+            margin: 0 0;
+        }
+    }
+
+    main .contact__column--left h2 {
+        margin-top: 40px;
     }
 }

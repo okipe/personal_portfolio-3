@@ -135,7 +135,7 @@ footer .footer__container {
   padding: 30px;
 }
 .navbar__logo {
-  width: 100px;
+  width: 10vh;
 }
 .navbar__menu li {
   list-style: none;
@@ -353,18 +353,127 @@ footer .footer__container img {
   }
 }
 @media all and (max-width: 960px) {
-  .navbar__menu li a {
+  main .navbar__menu li a {
     margin: 0 16px;
   }
-  .navbar__menu li a:hover {
+  main .navbar__menu li a:hover {
     color: #feef22;
   }
-  .hero__title {
-    font-size: 36px;
+  main .hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+  }
+  main .hero__title {
+    font-size: 40px;
     margin-bottom: 20px;
   }
-  .hero__subtitle {
+  main .hero__subtitle {
     font-size: 20px;
+  }
+  main .hero__button {
+    padding: 10px 15px;
+  }
+  main .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr;
+    gap: 40px;
+  }
+  main .technologies__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  main .contact {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 768px) {
+  header nav .navbar__menu {
+    display: none;
+  }
+  main .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main .hero__grid--low {
+    display: grid;
+    justify-content: center;
+  }
+  main .hero__right {
+    display: none;
+  }
+  main .hero__title {
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  main .hero__subtitle {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  main .hero__button {
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  main .hero__button a {
+    max-width: 100px;
+  }
+  main .hero__icons {
+    margin: 0 30px;
+    align-self: center;
+    height: 30px;
+  }
+  main .hero__icons a {
+    margin-right: 20px;
+  }
+  main .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  main .technologies__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  main .about-me__grid {
+    grid-template-columns: 1fr;
+  }
+  footer .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer__container img {
+    margin: 0 10px 10px 10px;
+  }
+  footer .footer__container p {
+    text-align: center;
+  }
+}
+@media all and (max-width: 576px) {
+  main .hero__left h1 {
+    font-size: 48px;
+  }
+  main .hero__left p {
+    font-size: 28px;
+  }
+  main .technologies__grid {
+    grid-template-columns: 1fr;
+  }
+  main .studies__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  main .studies__grid__item:last-child {
+    margin: 0 0;
+  }
+  main .contact__column--left h2 {
+    margin-top: 40px;
   }
 }
 
