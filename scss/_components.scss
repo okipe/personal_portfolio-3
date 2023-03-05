@@ -60,29 +60,41 @@
 }
 
 /* NAVBAR */
-.navbar {
+header {
     padding: 30px;
 
-    &__logo {
+    .header__logo {
         width: 10vh;
     }
 
-    &__menu li {
-        list-style: none;
-        font-family: $text-font;
-        
-        a {
-            text-decoration: none;
-            color: $main_text-color-dark;
-            margin: 0 30px;
-            font-size: 20px;
-            transition: margin .25s linear; 
-            // -o-transition: font-size .25s linear; 
-            // -moz-transition: font-size .25s linear; 
-            // -webkit-transition: font-size .25s linear; 
+    .header__open-button--mobile,
+    .navbar__close-button--mobile {
+        display: none;
+    }
 
-            &:hover{
-                color: $other_1-color-dark;
+
+    .navbar {
+        &__menu li {
+            list-style: none;
+            font-family: $text-font;
+        
+            a {
+                text-decoration: none;
+                color: $main_text-color-dark;
+                margin: 0 30px;
+                font-size: 20px;
+                transition: margin .25s linear; 
+                // -o-transition: font-size .25s linear; 
+                // -moz-transition: font-size .25s linear; 
+                // -webkit-transition: font-size .25s linear; 
+
+                &:hover{
+                    color: $other_1-color-dark;
+                }
+            }
+
+            .navbar__menu__item--first {
+                display: none;
             }
         }
     }
@@ -359,7 +371,7 @@ footer {
 }
 
 @media all and (max-width: $breakpoint-lg){
-    main .navbar__menu li a {
+    header nav .navbar__menu li a {
         margin: 0 16px;
     
         &:hover{
@@ -407,10 +419,60 @@ footer {
 }
 
 @media all and (max-width: $breakpoint-md) {
-    header nav .navbar__menu {
-        display: none;
+    header .header__open-button--mobile {
+        display: block; /*Button of open*/
+        border: 0;
+        font-size: 40px;
+        background-color: transparent;
+        color: $main_text-color-dark;
+        cursor: pointer;
+    }
+    // header .navbar .navbar__close-button--mobile {
+    //     display: block;
+    //     }
+
+    header .navbar {
+        // It hide the menu
+        opacity: 0;
+        visibility: hidden;
+        //----
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed; /* The mobile menu will be fixed in the screen*/
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $background_2-color-dark;
+        padding: 2rem;
+        box-shadow: 0 0 0 1000vmax rgba($color: #000000, $alpha: 0.4);
+
+        &__menu {
+            flex-direction: column;
+            align-items: end;
+            line-height: 3rem;
+        }
+
+        &__close-button--mobile {
+            display: block; /*Button of close*/
+            border: 0;
+            font-size: 40px;
+            background-color: transparent;
+            color: $main_text-color-dark;
+            cursor: pointer;
+        }
+    }
+
+    header .navbar__menu li .navbar__menu__item--first {
+        display: inline;
     }
     
+    .navbar.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
     main .hero {
         display: grid;
         grid-template-columns: 1fr;

@@ -18,7 +18,7 @@ body {
   background: #262a3b;
 }
 
-nav {
+header {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -39,11 +39,11 @@ p {
 }
 
 /* MEDIA QUERIES */
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
 }
-.navbar__menu {
+header .navbar__menu {
   align-items: center;
   display: flex;
   font-family: #000000;
@@ -131,25 +131,32 @@ footer .footer__container {
 }
 
 /* NAVBAR */
-.navbar {
+header {
   padding: 30px;
 }
-.navbar__logo {
+header .header__logo {
   width: 10vh;
 }
-.navbar__menu li {
+header .header__open-button--mobile,
+header .navbar__close-button--mobile {
+  display: none;
+}
+header .navbar__menu li {
   list-style: none;
   font-family: "Nunito Sans", sans-serif;
 }
-.navbar__menu li a {
+header .navbar__menu li a {
   text-decoration: none;
   color: #ffffff;
   margin: 0 30px;
   font-size: 20px;
   transition: margin 0.25s linear;
 }
-.navbar__menu li a:hover {
+header .navbar__menu li a:hover {
   color: #feef22;
+}
+header .navbar__menu li .navbar__menu__item--first {
+  display: none;
 }
 
 /* MAIN */
@@ -353,10 +360,10 @@ footer .footer__container img {
   }
 }
 @media all and (max-width: 960px) {
-  main .navbar__menu li a {
+  header nav .navbar__menu li a {
     margin: 0 16px;
   }
-  main .navbar__menu li a:hover {
+  header nav .navbar__menu li a:hover {
     color: #feef22;
   }
   main .hero {
@@ -391,8 +398,48 @@ footer .footer__container img {
   }
 }
 @media all and (max-width: 768px) {
-  header nav .navbar__menu {
-    display: none;
+  header .header__open-button--mobile {
+    display: block; /*Button of open*/
+    border: 0;
+    font-size: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  header .navbar {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: fixed; /* The mobile menu will be fixed in the screen*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    padding: 2rem;
+    box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.4);
+  }
+  header .navbar__menu {
+    flex-direction: column;
+    align-items: end;
+    line-height: 3rem;
+  }
+  header .navbar__close-button--mobile {
+    display: block; /*Button of close*/
+    border: 0;
+    font-size: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  header .navbar__menu li .navbar__menu__item--first {
+    display: inline;
+  }
+  .navbar.visible {
+    opacity: 1;
+    visibility: visible;
   }
   main .hero {
     display: grid;

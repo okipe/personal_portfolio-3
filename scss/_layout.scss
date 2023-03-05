@@ -6,11 +6,11 @@
 
 @use 'base' as *;
 
-.navbar {
+header {
     display: flex;
     justify-content: space-between;
 
-    &__menu {
+    .navbar__menu {
         align-items: center;
         display: flex;
         font-family: $black-text-button;

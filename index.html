@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscar Román - desarrollador web y comunicador digital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
+    
+
 </head>
 <body>
     <!-- Header -->
     <header id="inicio">
-        <nav class="navbar">
-            <a href="#inicio"><img src="./assets/img/personal_brand-dark.svg" alt="Logo Oscar Román Developer" class="navbar__logo"></a>
+        <a href="#inicio"><img src="./assets/img/personal_brand-dark.svg" alt="Oscar Román Developer" class="header__logo"></a>
+        <button class="header__open-button--mobile" id="open"><i class="bi bi-list"></i></button><!--In allow to OPEN the mobile menu-->
+        <nav class="navbar" id="navbar">  <!-- The visible class make navbar visible-->
+            <button class="navbar__close-button--mobile" id="close"><i class="bi bi-x"></i></button><!--It allow to CLOSE the mobile menu-->
             <ul class="navbar__menu">
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#sobre mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio"  class="navbar__menu__item--first navbar__menu__item">Inicio</a></li><!--In desktop it has display none-->
+                <li><a href="#proyectos" class="navbar__menu__item">Proyectos</a></li>
+                <li><a href="#tecnologias" class="navbar__menu__item">Tecnologías</a></li>
+                <li><a href="#sobre mi" class="navbar__menu__item">Sobre mí</a></li>
+                <li><a href="#contacto" class="navbar__menu__item">Contacto</a></li>
             </ul>
         </nav><!--End of .navbar-->
     </header> 
@@ -207,5 +213,7 @@
             <p>© 2023 Oscar Román. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
