@@ -46,7 +46,6 @@ header {
 header .navbar__menu {
   align-items: center;
   display: flex;
-  font-family: #000000;
 }
 
 main .hero {
@@ -141,6 +140,9 @@ header .header__open-button--mobile,
 header .navbar__close-button--mobile {
   display: none;
 }
+header .navbar__menu {
+  /* Dropdown Menu */
+}
 header .navbar__menu li {
   list-style: none;
   font-family: "Nunito Sans", sans-serif;
@@ -157,6 +159,32 @@ header .navbar__menu li a:hover {
 }
 header .navbar__menu li .navbar__menu__item--first {
   display: none;
+}
+header .navbar__menu .language-dropdown {
+  position: relative;
+}
+header .navbar__menu .language-dropdown img {
+  width: 16px;
+  margin-right: 8px;
+}
+header .navbar__menu .language-dropdown .language-menu {
+  opacity: 0;
+  position: absolute;
+  background-color: #262a3b;
+  padding: 10px 10px 10px 1px;
+  right: 0;
+  margin-top: 15px;
+  width: 180px;
+  border: 1px solid #feef22;
+  border-radius: 5px;
+  transition: opacity 0.2s ease;
+}
+header .navbar__menu .language-dropdown .language-menu.show {
+  display: block;
+  opacity: 1;
+}
+header .navbar__menu .language-dropdown .language-menu ul li {
+  text-align: right;
 }
 
 /* MAIN */
@@ -329,6 +357,12 @@ footer .footer__container img {
   }
 }
 @media all and (max-width: 1200px) {
+  header nav .navbar__menu li a {
+    margin: 0 16px;
+  }
+  header nav .navbar__menu li a:hover {
+    color: #feef22;
+  }
   .hero__icons {
     margin: 0 20px;
     align-self: center;
@@ -361,10 +395,7 @@ footer .footer__container img {
 }
 @media all and (max-width: 960px) {
   header nav .navbar__menu li a {
-    margin: 0 16px;
-  }
-  header nav .navbar__menu li a:hover {
-    color: #feef22;
+    margin: 0 12px;
   }
   main .hero {
     grid-template-columns: 1fr 1fr;
@@ -407,6 +438,8 @@ footer .footer__container img {
     cursor: pointer;
   }
   header .navbar {
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     visibility: hidden;
     display: flex;
@@ -418,7 +451,7 @@ footer .footer__container img {
     right: 0;
     bottom: 0;
     background-color: #000000;
-    padding: 2rem;
+    padding: 2rem 2rem 0.5rem 4.3rem;
     box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.4);
   }
   header .navbar__menu {
@@ -440,6 +473,7 @@ footer .footer__container img {
   .navbar.visible {
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
   }
   main .hero {
     display: grid;
