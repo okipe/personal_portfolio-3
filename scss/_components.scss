@@ -22,18 +22,6 @@
     color: $black-text-button;
 }
 
-// .button--main-mobile {
-//     background-color: $other_1-color-dark;
-//     border-radius: 1rem;
-//     padding: 0.8rem 1.5rem;
-//     text-decoration: none;
-//     font-family: $text-font;
-//     font-size: 32px;
-//     font-weight: bold;
-//     text-decoration: none;
-//     color: $black-text-button;
-// }
-
 .button--secondary {
     // background-color: $other_1-color-dark;
     display: inline-flex;
@@ -242,23 +230,6 @@ header {
 
 /* ABOUT-ME*/
 
-/* .about-me {
-    margin: 0 60px 0 0;
-    
-    img {
-        width: 100%;
-    }
-
-    h2 {
-        @extend .heading--2;
-    }
-
-    p {
-        font-size: 22px;
-        margin-bottom: 12px;
-        line-height: 2;
-    }
-} */
 
 .about-me {
     margin: 60px 0 0 0;
@@ -415,9 +386,6 @@ footer {
 }
 
 @media all and (max-width: $breakpoint-lg){
-    header nav .navbar__menu li a {
-        margin: 0 12px;
-    }
 
     main .hero {
         grid-template-columns: 1fr 1fr;

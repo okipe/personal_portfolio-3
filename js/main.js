@@ -1,3 +1,5 @@
+'use strict';
+
 /* LANGUAGE SELECTOR */
 var dropdown = document.querySelector('.language-dropdown');
 
